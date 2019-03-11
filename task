@@ -1,0 +1,44 @@
+package com.yash.todolistapp.model;
+
+import java.util.Date;
+
+import javax.sql.DataSource;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Component;
+@Component
+public class Task {
+	private int id;
+	private String title;
+	private Date date;
+	private DataSource datasource;
+	private JdbcTemplate jdbcTemplate;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public Date getDate() {
+		return date;
+	}
+	public DataSource getDatasource() {
+		return datasource;
+	}
+	public void setDatasource(DataSource datasource) {
+		this.datasource = datasource;
+	}
+	public void setDate(Date date) {
+		this.date = date;
+	}
+	
+
+}
