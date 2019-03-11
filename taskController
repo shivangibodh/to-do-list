@@ -1,0 +1,25 @@
+package com.yash.todolistapp.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.yash.todolistapp.service.TaskService;
+
+
+
+@Controller
+public class TaskController {
+
+	@Autowired
+TaskService taskService;
+//	private int id=1;
+
+	@RequestMapping("/start.ds")
+	public String RequestToDOList() {
+		
+	
+	return "dashboard";
+	}
+
+}
