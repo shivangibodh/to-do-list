@@ -1,0 +1,20 @@
+package com.yash.todolist.test;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.yash.todolistapp.model.Task;
+import com.yash.todolistapp.service.TaskService;
+import com.yash.todolistapp.serviceimpl.TaskServiceImpl;
+
+public class ApplicationStartUp {
+
+	public static void main(String[] args) {
+		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
+		TaskService taskService = (TaskService) applicationContext.getBean("taskServiceImpl");
+		Task task = new Task();
+		task.setTitle("java assignment");
+		taskService.insert(task);
+	}
+
+}
