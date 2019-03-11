@@ -1,0 +1,74 @@
+package com.yash.todolistapp.daoimpl;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.List;
+
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Component;
+
+import com.yash.todolistapp.dao.TaskDAO;
+import com.yash.todolistapp.model.Task;
+
+@Component
+public class TaskDAOImpl implements TaskDAO{
+	@Autowired
+	private DataSource dataSource;
+	private JdbcTemplate jdbcTemplate;
+	private Connection con = null;
+	// private static String sql = null;
+	private static PreparedStatement pstmt = null;
+
+	public DataSource getDataSource() {
+		return dataSource;
+	}
+
+	@Autowired
+	public void setDataSource(DataSource dataSource) {
+		this.jdbcTemplate = new JdbcTemplate(dataSource);
+	}
+
+	public void create(Task task) {
+
+
+		try {
+			con = dataSource.getConnection();
+			pstmt = con.prepareStatement("INSERT INTO tasks(title) values(?)");
+		pstmt.setString(1, task.getTitle());
+		pstmt.execute();
+		
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	public void delete(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void edit(Task task) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public List<Task> list() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void findByid(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+
+}
