@@ -1,0 +1,70 @@
+body{
+	
+background-image: linear-gradient(-90deg,white,black);
+
+}
+h1{
+
+  text-shadow: 1px 1px 2px black, 0 0 1em white, 0 0 0.2em white;
+  color: white;
+  font: 1.5em Georgia, serif;
+
+}
+p{
+margin: 5px;
+	    background-color: white;
+    color: black;
+    padding: 9px;
+   
+    width: 596px;
+ border-radius: 5px;
+   
+    display: inline-block;
+    	box-shadow: -22px 23px 28px #443b3b;
+}
+
+.container0{
+	
+
+  	
+}
+   .container1{
+   
+ background-size: cover;
+ 	background-image: url("lukas-blazek-320606-unsplash.jpg");
+border: 3px solid white;
+border-radius: 15px;
+ 
+   	 width: 750px;
+    margin: 0 auto;
+    text-align: center;
+     
+     
+     
+      height: 560px;
+}
+
+
+
+.container2{
+	
+	    width: 489px;
+    height: 41px;
+	margin: 0 auto;
+	margin-top: 10px;
+border-radius: 5px;
+padding-top: 10px;
+
+margin-bottom: 10px;
+	
+	box-shadow: -22px 23px 28px #443b3b;
+}
+.container3{
+	
+	width: 650px;
+	margin: 0 auto;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	
+	
+}
